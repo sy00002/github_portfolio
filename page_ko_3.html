@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT 최우수상</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .background {
+      background: url('그림1.png') no-repeat right center/auto 100%;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+.top-line {
+  position: fixed; /* 또는 absolute + body 기준 */
+  top: 20px; /* 원하는 위치 */
+  left: 0;
+  width: 100vw; /* 뷰포트 너비 = 화면 전체 너비 */
+  height: 4px; /* 선 두께 */
+  background-color: #618D61;
+  z-index: 10; /* 다른 요소 위에 표시되도록 */
+}
+
+.gradient {
+  background: linear-gradient(to right,
+    hsl(166, 16%, 25%) 0%,
+    hsl(166, 16%, 25%) 70%,
+    hsl(166, 16%, 25%, 0) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+    .content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      padding: 60px 80px;
+      max-width: 1200px;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .subtitle-group {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      line-height: 1.2;
+      margin-top: 5px;
+    }
+
+    .progress-group {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .progress-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .progress-label {
+      font-weight: bold;
+      white-space: nowrap;
+      width: 80px;
+    }
+
+.bar-container {
+  width: 320px;
+  height: 12px;
+  background-color: #364B46;
+  box-shadow: inset -2px -2px 6px rgba(0, 0, 0, 0.4); /* 왼쪽 위 안쪽 그림자 */
+  border-radius: 20px;
+  position: relative;
+}
+
+.bar-fill {
+  height: 6px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.person {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    .role {
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    .detail {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      width: 550px;
+      max-width: 30%;
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 40px 20px;
+      }
+
+      .bar-container {
+        width: 100%;
+      }
+
+      .logo {
+        width: 250px;
+      }
+    }
+
+    .back-button {
+  position: fixed;
+  top: 30px; /* 선 아래에 배치 */
+  right: 40px; /* 오른쪽 여백 */
+  z-index: 20;
+  padding: 10px 18px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #364B46;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: white;
+}
+
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="gradient"></div>
+
+  <div class="content">
+    <div class="top-line"></div>
+    <div class="title-row">
+      <div class="title">PT 최우수상</div>
+      <div class="subtitle-group">
+        <div>UnivPT</div>
+        <div>2023.11</div>
+      </div>
+    </div>
+
+    
+ 
+
+
+    <div class="progress-group">
+         <div class="person">기여도 (n=5)</div>
+      <div class="progress-item">
+        <div class="progress-label">기획 30%</div>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 30%;"></div>
+        </div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-label">제작 50%</div>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 50%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      역할 : 방향성 확립 및 아이디어 구체화, 회의 주도, PPT 제작 및 목업
+    </div>
+
+    <div class="detail">
+Detail:<br> 출퇴근길 지하철 혼잡 문제를 해결하기 위한 혁신적인 방안으로 ‘Signal Zone’을 제안하여 최우수상을 수상했습니다.<br> 초기 주제였던 장애인 교통 문제에서 지하철 혼잡 문제로 과감한 방향성 전환을 제안하고 팀을 설득했습니다.<br> 제작 과정에서 아이디어 구체화가 필요한 부분을 스스로 식별하였고, 해당 부분에 대해 지속적으로 회의를 주도하여<br> 팀의 아이디어를 통합하고 구체적으로 발전시켰습니다. 지하철 내부 혼잡 문제 해결을 위해 ‘Signal Zone’이라는 아이디어를<br> 제시했습니다. 이는 지하철 내벽에 ‘Z’ 모양으로 노란색과 초록색 테이프를 부착하여 하차 방향에 따라 승객들이 대기할 수 있는<br> 구역을 설정하는 방식입니다. 노란색 구역에서는 왼쪽으로 하차하는 승객이, 초록색 구역에서는 오른쪽으로 하차하는 승객이<br> 대기하도록 하여, 하차 시 분할을 효과적으로 실시하여 질서와 양보를 유도하는 목적으로 설계했습니다.
+    </div>
+  </div>
+
+  <img src="그림3.png" alt="로고" class="logo" />
+  <button class="back-button" onclick="history.back()">◀ 이전 페이지로</button>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>영상부 운영진</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .background {
+      background: url('그림5.png') no-repeat right center/auto 100%;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+.top-line {
+  position: fixed; /* 또는 absolute + body 기준 */
+  top: 20px; /* 원하는 위치 */
+  left: 0;
+  width: 100vw; /* 뷰포트 너비 = 화면 전체 너비 */
+  height: 4px; /* 선 두께 */
+  background-color: #B4CCB4;
+  z-index: 10; /* 다른 요소 위에 표시되도록 */
+}
+
+.gradient {
+  background: linear-gradient(to right,
+    hsl(166, 16%, 25%) 0%,
+    hsl(166, 16%, 25%) 72%,
+    hsl(166, 16%, 25%, 0) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+    .content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      padding: 60px 80px;
+      max-width: 1200px;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .subtitle-group {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      line-height: 1.2;
+      margin-top: 5px;
+    }
+
+    .progress-group {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .progress-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .progress-label {
+      font-weight: bold;
+      white-space: nowrap;
+      width: 80px;
+    }
+
+.bar-container {
+  width: 320px;
+  height: 12px;
+  background-color: #364B46;
+  box-shadow: inset -2px -2px 6px rgba(0, 0, 0, 0.4); /* 왼쪽 위 안쪽 그림자 */
+  border-radius: 20px;
+  position: relative;
+}
+
+.bar-fill {
+  height: 6px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.person {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    .role {
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    .detail {
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 270px;
+      right: 40px;
+      width: 550px;
+      max-width: 30%;
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 40px 20px;
+      }
+
+      .bar-container {
+        width: 100%;
+      }
+
+      .logo {
+        width: 250px;
+      }
+    }
+
+    .back-button {
+  position: fixed;
+  top: 30px; /* 선 아래에 배치 */
+  right: 40px; /* 오른쪽 여백 */
+  z-index: 20;
+  padding: 10px 18px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #364b46;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: white;
+}
+
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="gradient"></div>
+
+  <div class="content">
+    <div class="top-line"></div>
+    <div class="title-row">
+      <div class="title">영상부 운영진</div>
+      <div class="subtitle-group">
+        <div>GameMakers</div>
+        <div>2024.02 – 2024.07</div>
+      </div>
+    </div>
+
+    
+ 
+
+
+    <div class="progress-group">
+         <div class="person">기여도 (n=3 → 2)</div>
+      <div class="progress-item">
+        <div class="progress-label">기획 90%</div>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 90%;"></div>
+        </div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-label">제작 60%</div>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 60%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      역할 : 채널 방향성 확립, 콘텐츠 기획 및 제작<br>
+      <br>결과 : 조회 수 평소보다 1.4만회 높음, 구독자 수 지난 28일보다 600% 많음
+
+    </div>
+
+    <div class="detail">
+Detail:<br>프로젝트 초기에는 채널 방향성을 확립하는 데 중점을 두었습니다. 회원들의 작품이 프로젝트 말기에 완성되기에, <br>초기에 조회 수 및 구독자 수를 증가시키고 말기에 동아리 활동을 알리자는 목표를 설정했습니다. 이를 달성하기 위해<br> 개인적으로 트렌드 조사를 진행했고, '이비온' 크리에이터가 일으킨 마인크래프트 쇼츠 열풍과 당시 게임 유튜버들 사이에서<br> 유행이었던 ‘암벽 등산 게임’, ‘신칸센 0호’를 선정하여 콘텐츠 제작을 제안했습니다. 도달률을 더욱 높이기 위해 숏폼 콘텐츠<br> 위주로 임팩트 있는 영상을 제작해, 타깃 오디언스에게 효과적으로 전달되도록 했습니다. 프로젝트 말기에는 동아리 홍보를<br> 위해 내부 소재로 영상을 제작했습니다. 대부분의 숏폼 콘텐츠를 기획, 제작, 분석하는 작업을 총괄하며, 동아리의 인지도를 <br>높이고 활발한 활동을 알리는 데 기여했습니다. 
+
+    </div>
+  </div>
+
+  <img src="그림6.png" alt="로고" class="logo" />
+  <button class="back-button" onclick="history.back()">◀ 이전 페이지로</button>
+</body>
+</html>

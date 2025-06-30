@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마케팅 인턴</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      background-color: #364B46;
+    }
+
+    .top-line {
+      position: fixed;
+      top: 20px;
+      left: 0;
+      width: 100vw;
+      height: 4px;
+      background-color: white;
+      z-index: 10;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      padding: 60px 60px;
+      transform: scale(0.85); /* 전체 축소 */
+      transform-origin: top left;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .subtitle-group {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      line-height: 1.2;
+      margin-top: 5px;
+    }
+
+    .main-section {
+      display: flex;
+      margin-top: 40px;
+      gap: 40px;
+    }
+
+    .left-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      flex-shrink: 0;
+    }
+
+    .circle-block {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .circle-icon {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .circle-icon span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .text-block {
+      font-size: 15px;
+      line-height: 2;
+      max-width: 700px;
+      white-space: pre-line;
+    }
+
+.right-image-1 {
+  width: 460px;
+  flex-shrink: 0;
+  margin-left: 80px;   /* ← 오른쪽으로 이동 */
+  margin-top: -120px;   /* ↑ 위로 이동 (음수) */
+}
+
+    .right-image-1 img {
+      width: 100%;
+      height: auto;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 30px;
+      right: 40px;
+      z-index: 20;
+      padding: 10px 18px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #364B46;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.2s;
+    }
+
+    .back-button:hover {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-line"></div>
+  <div class="content">
+    <div class="title-row">
+      <div class="title">마케팅 인턴</div>
+      <div class="subtitle-group">
+        <div>HiGROUND</div>
+        <div>2024.09 - 2024.12</div>
+      </div>
+    </div>
+
+    <div class="main-section">
+      <!-- 왼쪽 아이콘 + 설명 -->
+      <div class="left-icons">
+        <div class="circle-block">
+          <div class="circle-icon" style="background-image: url('instagram.png');">
+            <span>인스타그램</span>
+          </div>
+          <div class="text-block">
+역할 : 동종업계 게시물 탐색 및 아이디어 도출 → 자사 게시물 기획 및 콘텐츠 제작 → 계정 관리
+예시 : 시사회 티켓 경품의 기대평 이벤트, 리뷰평, 크레딧, 인터뷰 큐레이션, 연말 시즌 게시물 등  
+결과 : 우선순위 설정 및 업무 체계화를 통해 신속한 작업 처리 능력 강화
+          </div>
+        </div>
+        <div class="circle-block">
+          <div class="circle-icon" style="background-image: url('data.png');">
+            <span>데이터 분석</span>
+          </div>
+          <div class="text-block">
+역할 : 1. 매주 새로운 작품에 대한 소비자 반응과 이슈를 정리하여 콘텐츠 모니터링 자료 제작  
+ㅤㅤㅤ2. 굿데이터 내 배우 화제성 지표를 활용하여, 화제성있는 배우들 정보를 노션에 정리
+결과 : 업무 효율화를 위한 엑셀 및 노션 활용 능력과 데이터를 분석하여 인사이트를 도출해 내는 능력 확보
+          </div>
+        </div>
+        <div class="circle-block">
+          <div class="circle-icon" style="background-image: url('design.png');">
+            <span>디자인</span>
+          </div>
+          <div class="text-block">
+역할 : 회사소개서 및 작품소개서 템플릿 제작, 서울 디자인 페스티벌(서디페) 출장  
+예시 : 기업 아이덴티티를 잘 드러내면서도 작품의 셀링 포인트를 효과적으로 전달할 수 있는 템플릿 디자인  
+ㅤㅤㅤ서디페에 방문하여 디자인 트렌드를 파악, 더 나아가 기업에 적용할 디자인 아이디어를 제공
+결과 : 디자인적 견문을 넓히고 트렌드를 파악하여 디자인적 역량을 강화함
+          </div>
+        </div>
+      </div>
+
+      <!-- 오른쪽 이미지 -->
+      <div class="right-image-1">
+        <img src="그림7.png" alt="그림7" />
+      </div>
+
+    </div>
+  </div>
+
+  <button class="back-button" onclick="history.back()">◀ 이전 페이지로</button>
+</body>
+</html>

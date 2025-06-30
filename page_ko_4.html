@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스타트업 전략 제안</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .background {
+      background: url('그림2.png') no-repeat right center/auto 100%;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+.top-line {
+  position: fixed; /* 또는 absolute + body 기준 */
+  top: 20px; /* 원하는 위치 */
+  left: 0;
+  width: 100vw; /* 뷰포트 너비 = 화면 전체 너비 */
+  height: 4px; /* 선 두께 */
+  background-color: #3E6E3A;
+  z-index: 10; /* 다른 요소 위에 표시되도록 */
+}
+
+.gradient {
+  background: linear-gradient(to right,
+    hsl(166, 16%, 25%) 0%,
+    hsl(166, 16%, 25%) 70%,
+    hsl(166, 16%, 25%, 0) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+    .content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      padding: 60px 80px;
+      max-width: 1200px;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .subtitle-group {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      line-height: 1.2;
+      margin-top: 5px;
+    }
+
+    .progress-group {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .progress-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .progress-label {
+      font-weight: bold;
+      white-space: nowrap;
+      width: 80px;
+    }
+
+.bar-container {
+  width: 320px;
+  height: 12px;
+  background-color: #364B46;
+  box-shadow: inset -2px -2px 6px rgba(0, 0, 0, 0.4); /* 왼쪽 위 안쪽 그림자 */
+  border-radius: 20px;
+  position: relative;
+}
+
+.bar-fill {
+  height: 6px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.person {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    .role {
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    .detail {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
+.logo {
+  display: block;
+  margin: 40px auto 10px auto; /* 중앙 정렬 및 여백 조절 */
+  width: 200px;
+  max-width: 30%;
+}
+.quote {
+  color: rgb(255, 255, 255, 0.3);
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
+  margin-top: -40px;
+  white-space: pre-line;
+}
+
+.logo-group {
+  position: relative;
+  top: -500px;
+  left: 120px;
+}
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 40px 20px;
+      }
+
+      .bar-container {
+        width: 100%;
+      }
+
+      .logo {
+        width: 250px;
+      }
+    }
+
+    .back-button {
+  position: fixed;
+  top: 30px; /* 선 아래에 배치 */
+  right: 40px; /* 오른쪽 여백 */
+  z-index: 20;
+  padding: 10px 18px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #364B46;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: white;
+}
+
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="gradient"></div>
+
+  <div class="content">
+    <div class="top-line"></div>
+    <div class="title-row">
+      <div class="title">스타트업 전략 제안</div>
+      <div class="subtitle-group">
+        <div>Marketing Is Luv</div>
+        <div>2023.05 – 2023.06</div>
+      </div>
+    </div>
+
+    
+ 
+
+
+    <div class="progress-group">
+         <div class="person">기여도 (n=5)</div>
+      <div class="progress-item">
+        <div class="progress-label">기획 25%</div>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 25%;"></div>
+        </div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-label">제작 50%</div>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 50%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      ROLE : 분석 및 타깃 도출, 마케팅 전략 제안, 발표
+    </div>
+
+    <div class="detail">
+Detail:<br> 스타트업 리버스마운틴에서는 B2B 영업에서 B2C 영업으로 전환할 목적으로, 일정 관리 서비스 'Time Collabo'의 인지도를<br> 제고할 방안을 제안받고자 했습니다. 저희는 지속된 회의를 통해 차별화 요소로 '깔끔하고 직관적인 디자인, AI 일정 추천 시스템'<br>을 꼽았습니다. 해당 요소를 선호할 타깃을 찾기 위해 시장 세분화를 진행했고, 자기 계발 라이프스타일을 가진 10·20세대 남성을<br>  타깃으로 제안했습니다. 해당 타깃에게 효과적으로 홍보하기에 적합한 홍보 채널을 여러개 선정했습니다. 다양한 채널에서<br> ‘일정 관리의 필요성’ 메시지를 전하며 ‘Time Collabo’를 포지셔닝하기 위해 IMC 전략을 사용했습니다. 메시지를 전하기 위해<br>  ‘큰 돌과 작은 돌 이야기’를 빌려 캐릭터를 돌멩이 모양으로 제작했습니다. 제작한 캐릭터를 각 채널에 활용해 소비자에게 인지도를<br>제고하는 전략을 수립했습니다. 해당 전략을 스타트업 CEO분들이 모인 자리에서 발표하여 긍정적인 평가를 얻었습니다.
+    </div>
+<div class="logo-group">
+  <img src="그림4.png" alt="로고" class="logo" />
+  <div class="quote">
+    만약 당신이 큰돌을 먼저 넣지 않는다면<br>
+    영원히 큰 돌을 넣지 못할 것이다<br>
+    - 큰 돌과 작은 돌 이야기
+  </div>
+</div>
+  </div>
+
+
+  <button class="back-button" onclick="history.back()">◀ 이전 페이지로</button>
+</body>
+</html>
